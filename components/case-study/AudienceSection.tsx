@@ -39,7 +39,7 @@ export function AudienceSection({ data }: AudienceSectionProps) {
                   duration: 12 + index * 3,
                   delay: -(index * 3.4 + 0.8),
                 }}
-                className="flex h-full flex-col justify-between gap-3 rounded-[24px] border border-white/[0.14] bg-white/[0.05] p-5 shadow-[0_12px_32px_rgba(0,0,0,0.35)] lg:gap-[22px] lg:rounded-[32px] lg:border-[1.2px] lg:border-white/[0.28] lg:p-[34px]"
+                className="flex h-full flex-col justify-between gap-3 rounded-[24px] bg-white/[0.05] p-5 shadow-[0_12px_32px_rgba(0,0,0,0.35)] backdrop-blur-md lg:gap-[22px] lg:rounded-[32px] lg:p-[34px]"
               >
                 <div className="relative z-10 flex flex-col gap-3 lg:gap-[22px]">
                   {/* Top: Avatar + Name + Role */}

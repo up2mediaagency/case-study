@@ -69,6 +69,7 @@ export function HeroCinematic({ data, availableImages }: HeroCinematicProps) {
 
   return (
     <section
+      id="hero"
       ref={heroRef}
       className="relative overflow-hidden bg-[#05070F] px-5 pt-24 pb-14 lg:px-[144px] lg:pt-28 lg:pb-0"
     >

@@ -111,10 +111,10 @@ export function ArchitectureSection({ data }: ArchitectureSectionProps) {
                           duration: 10 + ((index + 1) % 4) * 2,
                           delay: -(index * 2.1 + 0.7),
                         }}
-                        className={`flex h-[56px] w-full items-center justify-center rounded-[18px] border px-3 text-center text-[17px] font-bold ${
+                        className={`flex h-[56px] w-full items-center justify-center rounded-[18px] px-3 text-center text-[17px] font-bold backdrop-blur-md ${
                           isBranch
-                            ? "border-[1.4px] border-[#02B3D2]/70 bg-[#02B3D2]/[0.14] text-white shadow-[0_0_20px_rgba(2,179,210,0.3)]"
-                            : "border-white/[0.22] bg-white/[0.06] text-white"
+                            ? "bg-[#02B3D2]/[0.14] text-white shadow-[0_0_20px_rgba(2,179,210,0.3)]"
+                            : "bg-white/[0.06] text-white"
                         }`}
                       >
                         <span className="relative z-10">{page}</span>
@@ -150,7 +150,7 @@ export function ArchitectureSection({ data }: ArchitectureSectionProps) {
                               duration: 14,
                               delay: -4.2,
                             }}
-                            className="flex h-[56px] w-[220px] items-center justify-center rounded-[18px] border-[1.4px] border-[#02B3D2]/70 bg-[#02B3D2]/[0.14] px-4 text-center text-[17px] font-bold text-white shadow-[0_0_20px_rgba(2,179,210,0.3)]"
+                            className="flex h-[56px] w-[220px] items-center justify-center rounded-[18px] bg-[#02B3D2]/[0.14] px-4 text-center text-[17px] font-bold text-white shadow-[0_0_20px_rgba(2,179,210,0.3)] backdrop-blur-md"
                           >
                             <span className="relative z-10">
                               {data.branchSubPages[0]}
@@ -180,12 +180,12 @@ export function ArchitectureSection({ data }: ArchitectureSectionProps) {
                           <GlassCard
                             variant="none"
                             shine={{
-                              colors: ["#02B3D2", "#8FE9F7", "#025BCF"],
+                              colors: ["#EE2D3D", "#FF8A94", "#FFD1D5"],
                               borderWidth: 1.5,
                               duration: 16,
                               delay: -6.1,
                             }}
-                            className="flex h-[56px] w-[190px] items-center justify-center rounded-[18px] border-[1.4px] border-[#FF5A67]/80 bg-[#EE2D3D]/[0.16] px-4 text-center text-[17px] font-bold text-white shadow-[0_0_22px_rgba(238,45,61,0.35)]"
+                            className="flex h-[56px] w-[190px] items-center justify-center rounded-[18px] bg-[#EE2D3D]/[0.16] px-4 text-center text-[17px] font-bold text-white shadow-[0_0_22px_rgba(238,45,61,0.35)] backdrop-blur-md"
                           >
                             <span className="relative z-10">
                               {data.branchSubPages[1]}
@@ -231,32 +231,38 @@ export function ArchitectureSection({ data }: ArchitectureSectionProps) {
                           duration: 10 + ((index + 1) % 4) * 2,
                           delay: -(index * 2.1 + 0.5),
                         }}
-                        className="rounded-[14px] border border-white/[0.14] bg-white/[0.06] px-3.5 py-[9px] text-sm font-medium text-white"
+                        className="rounded-[14px] bg-white/[0.06] px-3.5 py-[9px] text-sm font-medium text-white backdrop-blur-md"
                       >
                         <span className="relative z-10">{page}</span>
                       </GlassCard>
 
                       {isBranch && (
                         <div className="flex flex-col items-start gap-1.5 border-s-2 border-[#02B3D2]/50 ps-4">
-                          {data.branchSubPages.map((sub, idx) => (
-                            <GlassCard
-                              key={sub}
-                              variant="none"
-                              shine={{
-                                colors: ["#02B3D2", "#8FE9F7", "#025BCF"],
-                                borderWidth: 1.5,
-                                duration: 14 + idx * 2,
-                                delay: -(idx * 2.5 + 3),
-                              }}
-                              className={`rounded-[14px] border px-3.5 py-[9px] text-sm font-medium text-white ${
-                                idx === data.branchSubPages.length - 1
-                                  ? "border-[#FF5A67]/70 bg-[#EE2D3D]/[0.16]"
-                                  : "border-[#02B3D2]/50 bg-[#02B3D2]/[0.16]"
-                              }`}
-                            >
-                              <span className="relative z-10">{sub}</span>
-                            </GlassCard>
-                          ))}
+                          {data.branchSubPages.map((sub, idx) => {
+                            const isFormNode =
+                              idx === data.branchSubPages.length - 1;
+                            return (
+                              <GlassCard
+                                key={sub}
+                                variant="none"
+                                shine={{
+                                  colors: isFormNode
+                                    ? ["#EE2D3D", "#FF8A94", "#FFD1D5"]
+                                    : ["#02B3D2", "#8FE9F7", "#025BCF"],
+                                  borderWidth: 1.5,
+                                  duration: 14 + idx * 2,
+                                  delay: -(idx * 2.5 + 3),
+                                }}
+                                className={`rounded-[14px] px-3.5 py-[9px] text-sm font-medium text-white backdrop-blur-md ${
+                                  isFormNode
+                                    ? "bg-[#EE2D3D]/[0.16]"
+                                    : "bg-[#02B3D2]/[0.16]"
+                                }`}
+                              >
+                                <span className="relative z-10">{sub}</span>
+                              </GlassCard>
+                            );
+                          })}
                         </div>
                       )}
                     </div>
@@ -267,19 +273,10 @@ export function ArchitectureSection({ data }: ArchitectureSectionProps) {
           </div>
         </Reveal>
 
-        {/* (b) Critical Path */}
+        {/* (b) Critical Path (NO shine border) */}
         <Reveal delay={0.1}>
-          <GlassCard
-            variant="none"
-            shine={{
-              colors: ["#02B3D2", "#8FE9F7", "#025BCF"],
-              borderWidth: 1.5,
-              duration: 14,
-              delay: -3.5,
-            }}
-            className="rounded-[24px] border border-white/[0.14] bg-white/[0.05] p-5 shadow-[0_12px_32px_rgba(0,0,0,0.35)] lg:rounded-[32px] lg:border-[1.2px] lg:border-[#02B3D2]/55 lg:px-10 lg:pt-[34px] lg:pb-10"
-          >
-            <h3 className="relative z-10 mb-4 text-base font-bold text-[#7FE7F9] lg:mb-[30px] lg:text-[26px] lg:font-extrabold lg:text-white">
+          <div className="rounded-[24px] border border-white/[0.14] bg-white/[0.05] p-5 shadow-[0_12px_32px_rgba(0,0,0,0.35)] lg:rounded-[32px] lg:border-[1.2px] lg:border-[#02B3D2]/55 lg:px-10 lg:pt-[34px] lg:pb-10">
+            <h3 className="mb-4 text-base font-bold text-[#7FE7F9] lg:mb-[30px] lg:text-[26px] lg:font-extrabold lg:text-white">
               {data.criticalPathTitle}
             </h3>
 
@@ -379,7 +376,7 @@ export function ArchitectureSection({ data }: ArchitectureSectionProps) {
                 ))}
               </div>
             </div>
-          </GlassCard>
+          </div>
         </Reveal>
       </div>
     </Section>

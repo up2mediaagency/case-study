@@ -62,7 +62,7 @@ export function DiscoverySection({ data }: DiscoverySectionProps) {
                 duration: 10 + ((index + 1) % 4) * 2,
                 delay: -(index * 2.7 + 1.2),
               }}
-              className="flex h-full flex-col justify-between gap-4 rounded-[24px] border border-white/[0.14] bg-white/[0.05] p-5 shadow-[0_12px_32px_rgba(0,0,0,0.35)] lg:rounded-[28px] lg:border-[1.2px] lg:border-white/[0.28] lg:px-8 lg:pt-[30px] lg:pb-8"
+              className="flex h-full flex-col justify-between gap-4 rounded-[24px] bg-white/[0.05] p-5 shadow-[0_12px_32px_rgba(0,0,0,0.35)] backdrop-blur-md lg:rounded-[28px] lg:px-8 lg:pt-[30px] lg:pb-8"
             >
               <div className="relative z-10 flex flex-col items-start gap-2.5 lg:gap-4">
                 {insight.illustrative && (
