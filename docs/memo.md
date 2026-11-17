@@ -37,9 +37,9 @@ Next.js (Turbopack) + Tailwind; font Tajawal (+Tangerine decorative); `<html dir
 - [x] Design (Figma): SIBA desktop + mobile done.
 - [x] Specs written: `docs/siba/content.md`, `layout.md`, `assets.md`.
 - [ ] Images exported into `public/case-studies/siba/` (owner) — check `assets.md`.
-- [ ] Bootstrap project (Next.js, fonts, theme, shared components).
-- [ ] Build SIBA sections 01–09 + placeholders for header/footer.
-- [ ] Motion pass.
+- [x] Bootstrap project (Next.js, fonts, theme, shared components).
+- [x] Build SIBA sections 01–09 + placeholders for header/footer.
+- [x] Motion pass.
 - [ ] Push to GitHub, connect Cloudflare preview.
 - [ ] Other case studies.
 

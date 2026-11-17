@@ -1,0 +1,455 @@
+import type { CaseStudyData } from "./types";
+
+export const sibaData: CaseStudyData = {
+  slug: "siba",
+  header: {
+    logoText: "Up To Media",
+    menu: [
+      "حلولنا",
+      "أعمالنا",
+      "من نحن",
+      "المدونة",
+      "الأخبار",
+      "تواصل معنا",
+    ],
+    loginLabel: "تسجيل الدخول",
+    ctaLabel: "ابدأ رحلة نموك",
+  },
+  hero: {
+    badge: "دراسة حالة · منصة مؤسسية غير ربحية",
+    titleLine1: "سيبا الأردن: من التمكين الاقتصادي",
+    titleLine2: "إلى بناء الجسور المؤسسية",
+    keyword: "بناء الجسور المؤسسية",
+    description:
+      "صممنا منظومة رقمية تفاعلية تدعم وتوحّد مجتمع الأعمال السوري في الأردن: تشبيك، تمويل، ودليل كفاءات في تجربة واحدة واضحة.",
+    primaryCta: { label: "زيارة الموقع", href: "#" },
+    secondaryCta: { label: "استكشف القصة", href: "#problem" },
+    facts: [
+      { label: "السنة", value: "2026" },
+      { label: "النطاق", value: "بحث UX · واجهات · نظام تصميم" },
+      { label: "المنصة", value: "ويب متجاوب" },
+      { label: "القطاع", value: "منظمة غير ربحية" },
+    ],
+    browserImage: {
+      src: "/case-studies/siba/home.png",
+      alt: "الصفحة الرئيسية لمنصة سيبا الأردن",
+      label: "الصفحة الرئيسية",
+    },
+    stats: [
+      { value: "+2500", label: "منشأة وشركة", ltr: true },
+      { value: "+30,000", label: "موظف مباشر", ltr: true },
+      { value: "+$1.5B", label: "استثمار سوري في الأردن", ltr: true },
+    ],
+  },
+  problem: {
+    header: {
+      number: "02",
+      badge: "المشكلة وسياق العمل",
+      title: "مجتمع أعمال نشط… وبوابة رقمية لا تعكس حجمه",
+      keyword: "وبوابة رقمية لا تعكس حجمه",
+      description:
+        "قبل البدء حدّدنا الاحتكاك الحقيقي، وأثره على المنظمة، ومعايير نجاح واضحة نقيس بها كل قرار.",
+    },
+    cards: [
+      {
+        number: "01",
+        title: "ثقة مؤسسية ضعيفة",
+        description:
+          "هوية رقمية لا تنقل حجم الأثر ولا تُطمئن الشركاء والجهات الداعمة.",
+      },
+      {
+        number: "02",
+        title: "مسار طلب غامض",
+        description:
+          "المستفيد لا يعرف أي نوع دعم يناسبه ولا ما الخطوات المطلوبة للتقديم.",
+      },
+      {
+        number: "03",
+        title: "تشتّت المدخل",
+        description:
+          "برامج وخدمات متعددة دون نقطة دخول واحدة، فيضيع الزائر قبل أن يبدأ.",
+      },
+    ],
+    criteriaTitle: "معايير النجاح المتفق عليها",
+    criteriaChips: [
+      "مدخل واحد واضح لكل خدمة",
+      "تقديم الطلب في 3 خطوات",
+      "دليل كفاءات قابل للبحث",
+      "تجربة جوال كاملة",
+    ],
+  },
+  discovery: {
+    header: {
+      number: "03",
+      badge: "الاكتشاف والبحث",
+      title: "من البيانات إلى القرار: أربع طرق بحث قادت كل ما صمّمناه لاحقاً.",
+      keyword: "أربع طرق بحث",
+    },
+    titleLine1: "من البيانات إلى القرار:",
+    titleLine2: "أربع طرق بحث قادت كل ما صمّمناه لاحقاً.",
+    methods: [
+      { number: "1", label: "مراجعة مسار التسجيل" },
+      { number: "2", label: "مقارنة منصات مماثلة" },
+      { number: "3", label: "تقييم الموقع السابق" },
+      { number: "4", label: "مقابلات أصحاب المصلحة" },
+    ],
+    illustrativeTag: "رقم توضيحي — يُستبدل ببيانات العميل",
+    insights: [
+      {
+        illustrative: true,
+        number: "3 من 4",
+        sentence: "من الزوار لا يميّزون نوع الدعم المناسب لهم من القائمة الرئيسية.",
+        decisionLabel: "القرار التصميمي",
+        decision: "تقسيم المسارات إلى بطاقات واضحة بأيقونات",
+      },
+      {
+        illustrative: true,
+        number: "+60%",
+        sentence: "يتخلّون عن النموذج الطويل قبل إكماله.",
+        decisionLabel: "القرار التصميمي",
+        decision: "نموذج من 3 خطوات مع مؤشّر تقدّم",
+      },
+      {
+        illustrative: true,
+        number: "70%",
+        sentence: "من الزيارات من الجوال.",
+        decisionLabel: "القرار التصميمي",
+        decision: "تصميم متجاوب يبدأ من الجوال",
+      },
+    ],
+  },
+  audience: {
+    header: {
+      number: "04",
+      badge: "الجمهور المستهدف",
+      title: "شخصيتان تقودان كل شاشة",
+      keyword: "تقودان كل شاشة",
+    },
+    illustrativeTag: "شخصية افتراضية مبنية على فهم الجمهور",
+    personas: [
+      {
+        illustrative: true,
+        avatarLetter: "ل",
+        name: "د. ليلى",
+        role: "ممثلة جهة شريكة",
+        goalsLabel: "الأهداف",
+        goals: [
+          "تتحقق من مصداقية المنظمة",
+          "تتابع الأثر بأرقام واضحة",
+        ],
+        painsLabel: "نقاط الألم",
+        pains: [
+          "معلومات متفرقة",
+          "هوية لا تعكس الحجم",
+        ],
+        chips: ["سطح مكتب", "عمل"],
+        quote: "“أحتاج صورة مؤسسية واضحة قبل أي شراكة.”",
+      },
+      {
+        illustrative: true,
+        avatarLetter: "خ",
+        name: "أبو خالد",
+        role: "صاحب مشروع صغير في عمّان",
+        goalsLabel: "الأهداف",
+        goals: [
+          "يجد الدعم المناسب بسرعة",
+          "يتعرّف إلى شركاء وأعضاء",
+        ],
+        painsLabel: "نقاط الألم",
+        pains: [
+          "لا يعرف من أين يبدأ",
+          "نماذج طويلة ومعقّدة",
+        ],
+        chips: ["جوال", "عربي فقط"],
+        quote: "“أريد أن أعرف ما الذي يناسبني خلال دقيقة.”",
+      },
+    ],
+  },
+  architecture: {
+    header: {
+      number: "05",
+      badge: "بنية المعلومات والمسارات",
+      title: "خريطة واضحة… ومسار بلا طرق مسدودة",
+      keyword: "ومسار بلا طرق مسدودة",
+    },
+    siteMapTitle: "خريطة الموقع",
+    rootLabel: "الرئيسية",
+    pages: [
+      "اتصل بنا",
+      "المركز الإعلامي",
+      "التشبيك والدعم",
+      "العضوية والشراكات",
+      "عن سيبا",
+    ],
+    branchParent: "التشبيك والدعم",
+    branchSubPages: ["منصة التشبيك والدعم", "نموذج الطلب"],
+    criticalPathTitle: "المسار الحرج: من الزيارة إلى الطلب",
+    criticalPathGroupLabel: "نموذج الطلب · 3 خطوات فقط",
+    steps: [
+      {
+        number: "1",
+        title: "الوصول",
+        description: "صفحة رئيسية تعرّف بسيبا ومسارات الدخول",
+      },
+      {
+        number: "2",
+        title: "فهم المنصة",
+        description: "عنوان واضح وخطوات ثلاث",
+      },
+      {
+        number: "3",
+        title: "البيانات الأساسية",
+        description: "اسم، صفة، تواصل",
+        inGroup: true,
+      },
+      {
+        number: "4",
+        title: "نوع الطلب والاحتياج",
+        description: "تحديد الاحتياج أو نوع الدعم",
+        inGroup: true,
+      },
+      {
+        number: "5",
+        title: "المراجعة والتحقق",
+        description: "مراجعة البيانات ثم الإرسال",
+        inGroup: true,
+      },
+    ],
+  },
+  pagesGallery: {
+    header: {
+      number: "06",
+      badge: "صفحات المنصة",
+      title: "سبع صفحات… منظومة واحدة متماسكة",
+      keyword: "منظومة واحدة متماسكة",
+      description:
+        "كل صفحة بنفس اللغة البصرية: خلفية داكنة، تدرجات هادئة، وبطاقات واضحة.",
+    },
+    cards: [
+      {
+        number: "01",
+        title: "الصفحة الرئيسية",
+        size: "large",
+        src: "/case-studies/siba/home.png",
+        alt: "الصفحة الرئيسية لمنصة سيبا",
+      },
+      {
+        number: "02",
+        title: "منصة التشبيك والدعم",
+        size: "large",
+        src: "/case-studies/siba/matchmaking.png",
+        alt: "صفحة منصة التشبيك والدعم في سيبا",
+      },
+      {
+        number: "03",
+        title: "دليل الكفاءات والخبرات",
+        size: "large",
+        src: "/case-studies/siba/talent-directory.png",
+        alt: "صفحة دليل الكفاءات والخبرات في سيبا",
+      },
+      {
+        number: "04",
+        title: "من نحن",
+        size: "small",
+        src: "/case-studies/siba/about.png",
+        alt: "صفحة من نحن في سيبا",
+      },
+      {
+        number: "05",
+        title: "شبكة الخبراء المعتمدين",
+        size: "small",
+        src: "/case-studies/siba/experts-network.png",
+        alt: "صفحة شبكة الخبراء المعتمدين في سيبا",
+      },
+      {
+        number: "06",
+        title: "مجلس الإدارة",
+        size: "small",
+        src: "/case-studies/siba/board.png",
+        alt: "صفحة مجلس الإدارة في سيبا",
+      },
+      {
+        number: "07",
+        title: "تواصل معنا",
+        size: "small",
+        src: "/case-studies/siba/contact.png",
+        alt: "صفحة تواصل معنا في سيبا",
+      },
+    ],
+  },
+  screens: {
+    header: {
+      number: "07",
+      badge: "الواجهات الرئيسية",
+      title: "منصة التشبيك والدعم: نموذج بسيط في ثلاث خطوات",
+      keyword: "نموذج بسيط في ثلاث خطوات",
+    },
+    desktopLabel: "نسخة الديسكتوب",
+    desktopImage: {
+      src: "/case-studies/siba/matchmaking.png",
+      alt: "نسخة الديسكتوب لمنصة التشبيك والدعم",
+      label: "منصة التشبيك والدعم",
+    },
+    mobileLabel: "نسخة الجوال",
+    mobileImage: {
+      src: "/case-studies/siba/matchmaking-mobile.png",
+      alt: "نسخة الجوال لمنصة التشبيك والدعم",
+      label: "منصة التشبيك والدعم (جوال)",
+    },
+    formDetailTitle: "تفصيل النموذج: كل خطوة بقرار",
+    formImage: {
+      src: "/case-studies/siba/form-step-1.png",
+      alt: "الخطوة الأولى من نموذج الطلب: البيانات الأساسية",
+      label: "البيانات الأساسية",
+    },
+    formNotes: [
+      {
+        number: "1",
+        title: "مؤشّر تقدّم واضح",
+        description: "ثلاث خطوات مرقّمة يعرف الزائر بها أين وصل.",
+      },
+      {
+        number: "2",
+        title: "حقول مجمّعة بعناوين",
+        description: "معلومات أساسية فقط في الخطوة الأولى لتخفيف الجهد.",
+      },
+      {
+        number: "3",
+        title: "إجراء رئيسي واحد",
+        description: "زر واحد بارز للانتقال للخطوة التالية.",
+      },
+    ],
+  },
+  designSystem: {
+    header: {
+      number: "08",
+      badge: "نظام التصميم",
+      title: "نظام تصميم داكن… بثلاثة ألوان",
+      keyword: "بثلاثة ألوان",
+      description:
+        "مأخوذ مباشرة من تصميم سيبا الفعلي: خط Readex Pro، زوايا ناعمة، وتدرجات زرقاء هادئة على خلفية داكنة.",
+    },
+    colorSectionLabel: "ألوان العلامة",
+    colorSectionEn: "COLOR",
+    brandColors: [
+      { name: "Brand Blue", hex: "#303188" },
+      { name: "Brand Red", hex: "#EE2D3D" },
+      { name: "Brand Aqua", hex: "#02B3D2" },
+    ],
+    buttonGradient: {
+      name: "تدرج الأزرار",
+      from: "#025BCF",
+      to: "#0091BD",
+    },
+    greys: [
+      "#0A0A0A",
+      "#141414",
+      "#1A1A1A",
+      "#282828",
+      "#3B3B3B",
+      "#4F4F4F",
+      "#636363",
+      "#818181",
+      "#BCBCBC",
+      "#D6DBDC",
+      "#F2F2F2",
+    ],
+    lightBlues: ["#BDE2FF", "#E9F5FF"],
+    radiusSpacingLabel: "الزوايا والمسافات",
+    radiusSpacingEn: "RADIUS · SPACING",
+    radii: [999, 25, 16, 12],
+    spacings: [32, 20, 10, 8, 4],
+    typographyLabel: "الخط",
+    typographyEn: "TYPOGRAPHY",
+    fontName: "Readex Pro",
+    fontCaption: "الخط الأساسي لكل الواجهات",
+    weights: ["خفيف", "عادي", "متوسط", "شبه عريض", "عريض"],
+    samples: [
+      { label: "عنوان رئيسي كبير", size: "lg" },
+      { label: "عنوان فرعي واضح", size: "md" },
+      {
+        label: "نص الفقرة بحجم مريح للقراءة على الخلفيات الداكنة",
+        size: "sm",
+      },
+    ],
+    componentsLabel: "مكوّنات الواجهة",
+    componentsEn: "COMPONENTS",
+    sampleButtonLabel: "الخطوة التالية",
+    progressSteps: [
+      { number: "1", label: "البيانات" },
+      { number: "2", label: "الاحتياج" },
+      { number: "3", label: "المراجعة" },
+    ],
+  },
+  results: {
+    header: {
+      number: "09",
+      badge: "النتائج والأثر",
+      title: "منظومة واحدة… وأثر يمكن قياسه",
+      keyword: "وأثر يمكن قياسه",
+      description: "أرقام سيبا الأردن المعلنة، وما غيّرناه في تجربة التقديم.",
+    },
+    stats: [
+      {
+        value: "3",
+        label: "خطوات فقط لتقديم الطلب",
+        tag: "نتيجة التصميم",
+        highlighted: true,
+      },
+      {
+        value: "+2500",
+        label: "منشأة وشركة",
+        tag: "مُعلَن من سيبا الأردن",
+        ltr: true,
+      },
+      {
+        value: "+30,000",
+        label: "موظف مباشر",
+        tag: "مُعلَن من سيبا الأردن",
+        ltr: true,
+      },
+      {
+        value: "+$1.5B",
+        label: "استثمار سوري في الأردن",
+        tag: "مُعلَن من سيبا الأردن",
+        ltr: true,
+      },
+    ],
+    cta: {
+      chip: "UP TO MEDIA",
+      title: "لنصنع الفارق في مشروعك القادم",
+      description:
+        "فريق UP TO MEDIA يحوّل فكرتك إلى تجربة رقمية واضحة وقابلة للقياس.",
+      primaryButton: { label: "ابدأ رحلة نموك", href: "#" },
+      secondaryButton: { label: "شاهد المزيد من الأعمال", href: "/our-work" },
+    },
+  },
+  footer: {
+    brandName: "Up To Media",
+    brandDescription:
+      "وكالة تسويق وإعلام وتصميم وإنتاج تساعد العلامات التجارية على النمو بحلول رقمية متكاملة.",
+    contactTitle: "تواصل معنا",
+    email: "info@up2media.net",
+    phones: [
+      { country: "الأردن", number: "+962 79 121 4158" },
+      { country: "سوريا", number: "+963 968 925 523" },
+    ],
+    servicesTitle: "خدماتنا",
+    services: [
+      "تحسين محركات البحث",
+      "بناء المواقع الإلكترونية",
+      "التسويق وإدارة الحملات",
+      "تصميم الجرافيك",
+    ],
+    quickLinksTitle: "روابط سريعة",
+    quickLinks: [
+      "من نحن",
+      "الخدمات",
+      "أعمالنا",
+      "المدونة",
+      "الأخبار",
+      "فحص موقعك مجاناً",
+    ],
+    copyright: "جميع الحقوق محفوظة © 2026 Up To Media",
+  },
+};
