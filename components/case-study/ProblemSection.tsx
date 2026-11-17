@@ -1,4 +1,5 @@
 import type { ProblemData } from "@/data/types";
+import { GlassCard } from "./GlassCard";
 import { Reveal } from "./Reveal";
 import { Section } from "./Section";
 import { SectionHeader } from "./SectionHeader";
@@ -19,8 +20,17 @@ export function ProblemSection({ data }: ProblemSectionProps) {
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-6">
         {data.cards.map((card, index) => (
           <Reveal key={card.number} delay={index * 0.08}>
-            <div className="flex h-full flex-col justify-between gap-3 rounded-[24px] border border-[#EE2D3D]/30 bg-[#EE2D3D]/[0.07] p-5 shadow-[0_12px_32px_rgba(0,0,0,0.35)] lg:rounded-[28px] lg:border-[1.2px] lg:border-[#EE2D3D]/55 lg:bg-white/[0.05] lg:px-8 lg:pt-[30px] lg:pb-[34px]">
-              <div className="flex flex-col gap-2 lg:gap-3.5">
+            <GlassCard
+              variant="none"
+              shine={{
+                colors: ["#EE2D3D", "#FF8A94", "#02B3D2"],
+                borderWidth: 1.5,
+                duration: 10 + (index % 4) * 2,
+                delay: -(index * 2.5),
+              }}
+              className="flex h-full flex-col justify-between gap-3 rounded-[24px] border border-[#EE2D3D]/30 bg-[#EE2D3D]/[0.07] p-5 shadow-[0_12px_32px_rgba(0,0,0,0.35)] lg:rounded-[28px] lg:border-[1.2px] lg:border-[#EE2D3D]/55 lg:bg-white/[0.05] lg:px-8 lg:pt-[30px] lg:pb-[34px]"
+            >
+              <div className="relative z-10 flex flex-col gap-2 lg:gap-3.5">
                 <span
                   className="bg-clip-text text-[34px] font-extrabold leading-tight text-transparent lg:text-[64px] lg:leading-[70px]"
                   style={{
@@ -41,12 +51,12 @@ export function ProblemSection({ data }: ProblemSectionProps) {
               {/* Short red underline bar at bottom (desktop) */}
               <div
                 aria-hidden="true"
-                className="mt-2 hidden h-1 w-14 rounded-[2px] lg:block"
+                className="relative z-10 mt-2 hidden h-1 w-14 rounded-[2px] lg:block"
                 style={{
                   background: "linear-gradient(90deg, #EE2D3D, #FF6A75)",
                 }}
               />
-            </div>
+            </GlassCard>
           </Reveal>
         ))}
       </div>

@@ -1,4 +1,5 @@
 import type { AudienceData } from "@/data/types";
+import { GlassCard } from "./GlassCard";
 import { IllustrativeTag } from "./IllustrativeTag";
 import { Reveal } from "./Reveal";
 import { Section } from "./Section";
@@ -30,8 +31,17 @@ export function AudienceSection({ data }: AudienceSectionProps) {
               delay={index * 0.08}
               className={desktopOrder}
             >
-              <div className="flex h-full flex-col justify-between gap-3 rounded-[24px] border border-white/[0.14] bg-white/[0.05] p-5 shadow-[0_12px_32px_rgba(0,0,0,0.35)] lg:gap-[22px] lg:rounded-[32px] lg:border-[1.2px] lg:border-white/[0.28] lg:p-[34px]">
-                <div className="flex flex-col gap-3 lg:gap-[22px]">
+              <GlassCard
+                variant="none"
+                shine={{
+                  colors: ["#02B3D2", "#8FE9F7", "#025BCF"],
+                  borderWidth: 1.5,
+                  duration: 12 + index * 3,
+                  delay: -(index * 3.4 + 0.8),
+                }}
+                className="flex h-full flex-col justify-between gap-3 rounded-[24px] border border-white/[0.14] bg-white/[0.05] p-5 shadow-[0_12px_32px_rgba(0,0,0,0.35)] lg:gap-[22px] lg:rounded-[32px] lg:border-[1.2px] lg:border-white/[0.28] lg:p-[34px]"
+              >
+                <div className="relative z-10 flex flex-col gap-3 lg:gap-[22px]">
                   {/* Top: Avatar + Name + Role */}
                   <div className="flex items-center gap-3 lg:gap-[18px]">
                     <div
@@ -176,7 +186,7 @@ export function AudienceSection({ data }: AudienceSectionProps) {
 
                 {/* Quote: plain on mobile, tinted box on desktop */}
                 <blockquote
-                  className="text-[15px] font-medium leading-[1.6] text-[#E6ECFA] max-lg:!bg-none lg:rounded-[22px] lg:border lg:border-white/[0.14] lg:px-6 lg:py-[22px] lg:text-[22px] lg:font-extrabold lg:leading-[34px] lg:text-white"
+                  className="relative z-10 text-[15px] font-medium leading-[1.6] text-[#E6ECFA] max-lg:!bg-none lg:rounded-[22px] lg:border lg:border-white/[0.14] lg:px-6 lg:py-[22px] lg:text-[22px] lg:font-extrabold lg:leading-[34px] lg:text-white"
                   style={{
                     backgroundImage: isLayla
                       ? "linear-gradient(90deg, rgba(2,91,207,0.28), rgba(73,118,233,0.08))"
@@ -185,7 +195,7 @@ export function AudienceSection({ data }: AudienceSectionProps) {
                 >
                   {persona.quote}
                 </blockquote>
-              </div>
+              </GlassCard>
             </Reveal>
           );
         })}

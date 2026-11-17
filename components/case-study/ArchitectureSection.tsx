@@ -2,6 +2,7 @@
 
 import { motion, useReducedMotion } from "motion/react";
 import type { ArchitectureData } from "@/data/types";
+import { GlassCard } from "./GlassCard";
 import { NumberBadge } from "./NumberBadge";
 import { Reveal } from "./Reveal";
 import { Section } from "./Section";
@@ -61,15 +62,22 @@ export function ArchitectureSection({ data }: ArchitectureSectionProps) {
             {/* Desktop Site Map Tree */}
             <div className="hidden flex-col items-center lg:flex">
               {/* Root pill */}
-              <div
+              <GlassCard
+                variant="none"
+                shine={{
+                  colors: ["#02B3D2", "#8FE9F7", "#025BCF"],
+                  borderWidth: 1.5,
+                  duration: 10,
+                  delay: -1.5,
+                }}
                 className="flex h-[56px] w-[220px] items-center justify-center rounded-[18px] text-[17px] font-bold text-white shadow-[0_10px_30px_rgba(0,145,189,0.5)]"
                 style={{
                   background:
                     "linear-gradient(90deg, var(--btn-from), var(--btn-to))",
                 }}
               >
-                {data.rootLabel}
-              </div>
+                <span className="relative z-10">{data.rootLabel}</span>
+              </GlassCard>
 
               {/* Animated SVG connector lines */}
               <svg
@@ -91,19 +99,26 @@ export function ArchitectureSection({ data }: ArchitectureSectionProps) {
 
               {/* 5 child pages (RTL: عن سيبا right -> اتصل بنا left) */}
               <div className="grid w-full max-w-[1040px] grid-cols-5 gap-4">
-                {data.pages.map((page) => {
+                {data.pages.map((page, index) => {
                   const isBranch = page === data.branchParent;
                   return (
                     <div key={page} className="flex flex-col items-center">
-                      <div
+                      <GlassCard
+                        variant="none"
+                        shine={{
+                          colors: ["#02B3D2", "#8FE9F7", "#025BCF"],
+                          borderWidth: 1.5,
+                          duration: 10 + ((index + 1) % 4) * 2,
+                          delay: -(index * 2.1 + 0.7),
+                        }}
                         className={`flex h-[56px] w-full items-center justify-center rounded-[18px] border px-3 text-center text-[17px] font-bold ${
                           isBranch
                             ? "border-[1.4px] border-[#02B3D2]/70 bg-[#02B3D2]/[0.14] text-white shadow-[0_0_20px_rgba(2,179,210,0.3)]"
                             : "border-white/[0.22] bg-white/[0.06] text-white"
                         }`}
                       >
-                        {page}
-                      </div>
+                        <span className="relative z-10">{page}</span>
+                      </GlassCard>
 
                       {isBranch && (
                         <div className="flex flex-col items-center">
@@ -127,9 +142,20 @@ export function ArchitectureSection({ data }: ArchitectureSectionProps) {
                           </svg>
 
                           {/* Sub-page 1: منصة التشبيك والدعم */}
-                          <div className="flex h-[56px] w-[220px] items-center justify-center rounded-[18px] border-[1.4px] border-[#02B3D2]/70 bg-[#02B3D2]/[0.14] px-4 text-center text-[17px] font-bold text-white shadow-[0_0_20px_rgba(2,179,210,0.3)]">
-                            {data.branchSubPages[0]}
-                          </div>
+                          <GlassCard
+                            variant="none"
+                            shine={{
+                              colors: ["#02B3D2", "#8FE9F7", "#025BCF"],
+                              borderWidth: 1.5,
+                              duration: 14,
+                              delay: -4.2,
+                            }}
+                            className="flex h-[56px] w-[220px] items-center justify-center rounded-[18px] border-[1.4px] border-[#02B3D2]/70 bg-[#02B3D2]/[0.14] px-4 text-center text-[17px] font-bold text-white shadow-[0_0_20px_rgba(2,179,210,0.3)]"
+                          >
+                            <span className="relative z-10">
+                              {data.branchSubPages[0]}
+                            </span>
+                          </GlassCard>
 
                           <svg
                             viewBox="0 0 2 56"
@@ -151,9 +177,20 @@ export function ArchitectureSection({ data }: ArchitectureSectionProps) {
                           </svg>
 
                           {/* Sub-page 2: نموذج الطلب (RED tint) */}
-                          <div className="flex h-[56px] w-[190px] items-center justify-center rounded-[18px] border-[1.4px] border-[#FF5A67]/80 bg-[#EE2D3D]/[0.16] px-4 text-center text-[17px] font-bold text-white shadow-[0_0_22px_rgba(238,45,61,0.35)]">
-                            {data.branchSubPages[1]}
-                          </div>
+                          <GlassCard
+                            variant="none"
+                            shine={{
+                              colors: ["#02B3D2", "#8FE9F7", "#025BCF"],
+                              borderWidth: 1.5,
+                              duration: 16,
+                              delay: -6.1,
+                            }}
+                            className="flex h-[56px] w-[190px] items-center justify-center rounded-[18px] border-[1.4px] border-[#FF5A67]/80 bg-[#EE2D3D]/[0.16] px-4 text-center text-[17px] font-bold text-white shadow-[0_0_22px_rgba(238,45,61,0.35)]"
+                          >
+                            <span className="relative z-10">
+                              {data.branchSubPages[1]}
+                            </span>
+                          </GlassCard>
                         </div>
                       )}
                     </div>
@@ -164,38 +201,61 @@ export function ArchitectureSection({ data }: ArchitectureSectionProps) {
 
             {/* Mobile Site Map Vertical Tree */}
             <div className="flex flex-col items-start gap-2.5 lg:hidden">
-              <div
+              <GlassCard
+                variant="none"
+                shine={{
+                  colors: ["#02B3D2", "#8FE9F7", "#025BCF"],
+                  borderWidth: 1.5,
+                  duration: 10,
+                  delay: -1.2,
+                }}
                 className="rounded-[14px] px-4 py-[9px] text-[15px] font-bold text-white"
                 style={{
                   background:
                     "linear-gradient(90deg, var(--btn-from), var(--btn-to))",
                 }}
               >
-                {data.rootLabel}
-              </div>
+                <span className="relative z-10">{data.rootLabel}</span>
+              </GlassCard>
 
               <div className="flex flex-col gap-2 border-s-2 border-[#02B3D2]/50 ps-4">
-                {data.pages.map((page) => {
+                {data.pages.map((page, index) => {
                   const isBranch = page === data.branchParent;
                   return (
                     <div key={page} className="flex flex-col items-start gap-2">
-                      <span className="rounded-[14px] border border-white/[0.14] bg-white/[0.06] px-3.5 py-[9px] text-sm font-medium text-white">
-                        {page}
-                      </span>
+                      <GlassCard
+                        variant="none"
+                        shine={{
+                          colors: ["#02B3D2", "#8FE9F7", "#025BCF"],
+                          borderWidth: 1.5,
+                          duration: 10 + ((index + 1) % 4) * 2,
+                          delay: -(index * 2.1 + 0.5),
+                        }}
+                        className="rounded-[14px] border border-white/[0.14] bg-white/[0.06] px-3.5 py-[9px] text-sm font-medium text-white"
+                      >
+                        <span className="relative z-10">{page}</span>
+                      </GlassCard>
 
                       {isBranch && (
                         <div className="flex flex-col items-start gap-1.5 border-s-2 border-[#02B3D2]/50 ps-4">
                           {data.branchSubPages.map((sub, idx) => (
-                            <span
+                            <GlassCard
                               key={sub}
+                              variant="none"
+                              shine={{
+                                colors: ["#02B3D2", "#8FE9F7", "#025BCF"],
+                                borderWidth: 1.5,
+                                duration: 14 + idx * 2,
+                                delay: -(idx * 2.5 + 3),
+                              }}
                               className={`rounded-[14px] border px-3.5 py-[9px] text-sm font-medium text-white ${
                                 idx === data.branchSubPages.length - 1
                                   ? "border-[#FF5A67]/70 bg-[#EE2D3D]/[0.16]"
                                   : "border-[#02B3D2]/50 bg-[#02B3D2]/[0.16]"
                               }`}
                             >
-                              {sub}
-                            </span>
+                              <span className="relative z-10">{sub}</span>
+                            </GlassCard>
                           ))}
                         </div>
                       )}
@@ -209,8 +269,17 @@ export function ArchitectureSection({ data }: ArchitectureSectionProps) {
 
         {/* (b) Critical Path */}
         <Reveal delay={0.1}>
-          <div className="rounded-[24px] border border-white/[0.14] bg-white/[0.05] p-5 shadow-[0_12px_32px_rgba(0,0,0,0.35)] lg:rounded-[32px] lg:border-[1.2px] lg:border-[#02B3D2]/55 lg:px-10 lg:pt-[34px] lg:pb-10">
-            <h3 className="mb-4 text-base font-bold text-[#7FE7F9] lg:mb-[30px] lg:text-[26px] lg:font-extrabold lg:text-white">
+          <GlassCard
+            variant="none"
+            shine={{
+              colors: ["#02B3D2", "#8FE9F7", "#025BCF"],
+              borderWidth: 1.5,
+              duration: 14,
+              delay: -3.5,
+            }}
+            className="rounded-[24px] border border-white/[0.14] bg-white/[0.05] p-5 shadow-[0_12px_32px_rgba(0,0,0,0.35)] lg:rounded-[32px] lg:border-[1.2px] lg:border-[#02B3D2]/55 lg:px-10 lg:pt-[34px] lg:pb-10"
+          >
+            <h3 className="relative z-10 mb-4 text-base font-bold text-[#7FE7F9] lg:mb-[30px] lg:text-[26px] lg:font-extrabold lg:text-white">
               {data.criticalPathTitle}
             </h3>
 
@@ -310,7 +379,7 @@ export function ArchitectureSection({ data }: ArchitectureSectionProps) {
                 ))}
               </div>
             </div>
-          </div>
+          </GlassCard>
         </Reveal>
       </div>
     </Section>
