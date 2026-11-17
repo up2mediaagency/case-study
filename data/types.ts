@@ -3,6 +3,8 @@ export interface SectionHeaderData {
   badge: string;
   title: string;
   keyword: string;
+  keywordFrom?: string;
+  keywordTo?: string;
   description?: string;
 }
 

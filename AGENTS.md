@@ -14,7 +14,8 @@ Pages live under `/our-work/<slug>/`. This repo will be handed to the dev team, 
 - Do the work yourself. Ask only when something truly blocks you. When you need the owner to do something (export an image, run a command, approve a step) say exactly what and where.
 
 ## Hard constraints (summary — details in rules)
-- **No Figma access.** You cannot use Figma or any Figma plugin. Everything you need is in `docs/` and `public/`. Never ask to "check Figma". If something is missing, list it and tell the owner.
+- **Figma:** the design lives in Figma (see `docs/siba/figma-reference.md` for the file and node IDs). You may use your Figma tool to read designs and export the real screens as images, but only if it works in your environment. If it does not work, say exactly what is missing and fall back to `docs/` and `public/`. Never guess a design.
+- When Figma and the written docs disagree on layout/order/colours, **Figma wins** (see the corrections in `docs/siba/figma-reference.md`).
 - Stack: **Next.js (App Router) + TypeScript + Tailwind CSS**. Animation: the `motion` package (formerly Framer Motion). No other UI kits.
 - Arabic RTL only. No English UI text (except brand names such as SIBA and "UP TO MEDIA").
 - Real project screens are **images** (`next/image`). Never rebuild or redesign them in HTML/CSS.
@@ -30,13 +31,3 @@ Pages live under `/our-work/<slug>/`. This repo will be handed to the dev team, 
 ## Git
 - Remote: `https://github.com/up2mediaagency/case-study.git` (empty at start).
 - Commit after each finished step with a clear message. Do not push until the owner says so, unless the step is "push to GitHub".
-
-<!-- BEGIN:nextjs-agent-rules -->
-
-## This is NOT the Next.js you know
-
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
-
-This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
-
-<!-- END:nextjs-agent-rules -->

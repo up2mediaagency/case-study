@@ -21,19 +21,18 @@ export function SiteFooter({ data }: SiteFooterProps) {
           </div>
 
           {/* Contact */}
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col items-start gap-3">
             <h3 className="text-base font-bold text-white">
               {data.contactTitle}
             </h3>
             <a
               href={`mailto:${data.email}`}
-              className="text-sm text-[#AAB3C5] hover:text-white"
-              dir="ltr"
+              className="text-start text-sm text-[#AAB3C5] hover:text-white"
             >
-              {data.email}
+              <bdi dir="ltr">{data.email}</bdi>
             </a>
             {data.phones.map((phone) => (
-              <p key={phone.country} className="text-sm text-[#AAB3C5]">
+              <p key={phone.country} className="text-start text-sm text-[#AAB3C5]">
                 <span>{phone.country}: </span>
                 <bdi dir="ltr">{phone.number}</bdi>
               </p>

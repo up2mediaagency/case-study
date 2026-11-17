@@ -20,11 +20,22 @@ export function Section({
   return (
     <section
       id={id}
-      className={`relative overflow-hidden border-t border-white/10 px-5 py-16 lg:px-[144px] lg:py-[120px] ${className}`}
+      className={`relative overflow-hidden px-5 py-16 lg:px-[144px] lg:py-[120px] ${className}`}
       style={{
-        background: "linear-gradient(180deg, #0A0F2A 0%, #05070F 100%)",
+        background:
+          "linear-gradient(180deg, #0A0F2A 0%, #05070F 48%, #05070F 100%)",
       }}
     >
+      {/* Top divider */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 top-0 h-px"
+        style={{
+          background:
+            "linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(159,179,255,0.45) 50%, rgba(255,255,255,0) 100%)",
+        }}
+      />
+
       {/* Optional faint 80px grid fading out to the edges */}
       {showGrid && (
         <div
@@ -42,15 +53,15 @@ export function Section({
         />
       )}
 
-      {/* Two small blurred halos (top-start & lower-end) */}
+      {/* Two small soft blurred halos (top-start & lower-end) */}
       <div
         aria-hidden="true"
-        className="halo -top-24 start-[-80px] opacity-30"
+        className="halo -top-24 start-[-80px] opacity-[0.18]"
         style={{ backgroundColor: haloTopColor }}
       />
       <div
         aria-hidden="true"
-        className="halo -bottom-24 end-[-80px] opacity-25"
+        className="halo -bottom-24 end-[-80px] opacity-[0.16]"
         style={{ backgroundColor: haloBottomColor }}
       />
 
