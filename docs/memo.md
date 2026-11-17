@@ -43,6 +43,7 @@ Next.js (Turbopack) + Tailwind; font Tajawal (+Tangerine decorative); `<html dir
 - [x] Match Figma desktop (1440) + mobile (390) across all sections 01–09.
 - [x] Fullscreen page viewer in section 06 + Shine Border effect on Hero, 06 large cards, 09 CTA, and FullscreenViewer.
 - [ ] Push to GitHub, connect Cloudflare preview.
+- [x] JOBZED (`jobzed`): Figma assets exported, `/our-work/jobzed` built with light calm theme + Alexandria font, added to `/our-work` index.
 - [ ] Other case studies.
 
 ## Notes for next chats
