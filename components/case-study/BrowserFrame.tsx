@@ -4,17 +4,20 @@ interface BrowserFrameProps {
   children: ReactNode;
   className?: string;
   showTopGlow?: boolean;
+  overlay?: ReactNode;
 }
 
 export function BrowserFrame({
   children,
   className = "",
   showTopGlow = false,
+  overlay,
 }: BrowserFrameProps) {
   return (
     <div
       className={`relative overflow-hidden rounded-[16px] border border-white/20 bg-[#070B19] shadow-[0_20px_60px_rgba(0,0,0,0.55)] ${className}`}
     >
+      {overlay}
       {showTopGlow && (
         <div
           aria-hidden="true"

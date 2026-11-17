@@ -41,6 +41,7 @@ Next.js (Turbopack) + Tailwind; font Tajawal (+Tangerine decorative); `<html dir
 - [x] Build SIBA sections 01–09 + placeholders for header/footer.
 - [x] Motion pass.
 - [x] Match Figma desktop (1440) + mobile (390) across all sections 01–09.
+- [x] Fullscreen page viewer in section 06 + Shine Border effect on Hero, 06 large cards, 09 CTA, and FullscreenViewer.
 - [ ] Push to GitHub, connect Cloudflare preview.
 - [ ] Other case studies.
 

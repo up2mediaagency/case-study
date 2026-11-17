@@ -4,6 +4,7 @@ import { CountUp } from "./CountUp";
 import { Reveal } from "./Reveal";
 import { Section } from "./Section";
 import { SectionHeader } from "./SectionHeader";
+import { ShineBorder } from "@/components/ui/shine-border";
 
 interface ResultsSectionProps {
   data: ResultsData;
@@ -113,6 +114,12 @@ export function ResultsSection({ data }: ResultsSectionProps) {
               "linear-gradient(180deg, #0E1A5C 0%, #0A1240 55%, #12091F 100%)",
           }}
         >
+          <ShineBorder
+            shineColor={["#02B3D2", "#025BCF", "#0091BD"]}
+            borderWidth={1.5}
+            duration={12}
+            className="z-20"
+          />
           {/* Blue + red glows inside CTA panel (desktop) */}
           <div
             aria-hidden="true"

@@ -12,6 +12,7 @@ import type { HeroData } from "@/data/types";
 import { BrowserFrame } from "./BrowserFrame";
 import { GlassCard } from "./GlassCard";
 import { ScreenshotBox } from "./ScreenshotBox";
+import { ShineBorder } from "@/components/ui/shine-border";
 
 interface HeroCinematicProps {
   data: HeroData;
@@ -279,6 +280,14 @@ export function HeroCinematic({ data, availableImages }: HeroCinematicProps) {
             >
               <BrowserFrame
                 showTopGlow
+                overlay={
+                  <ShineBorder
+                    shineColor={["#02B3D2", "#025BCF", "#0091BD"]}
+                    borderWidth={1.5}
+                    duration={10}
+                    className="z-30"
+                  />
+                }
                 className="lg:rounded-t-[22px] lg:rounded-b-none lg:border-[1.5px] lg:border-white/50 lg:border-b-0"
               >
                 <div className="relative aspect-[350/204] w-full overflow-hidden lg:aspect-[1120/520]">
