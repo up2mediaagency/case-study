@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 
 interface ScreenshotBoxProps {
@@ -14,12 +17,14 @@ export function ScreenshotBox({
   src,
   alt,
   label,
-  available = false,
+  available = true,
   sizes = "(max-width: 768px) 100vw, 1120px",
   className = "",
   imageClassName = "",
 }: ScreenshotBoxProps) {
-  if (available) {
+  const [failed, setFailed] = useState(false);
+
+  if (available && !failed) {
     return (
       <div className={`relative h-full w-full overflow-hidden ${className}`}>
         <Image
@@ -27,6 +32,7 @@ export function ScreenshotBox({
           alt={alt}
           fill
           sizes={sizes}
+          onError={() => setFailed(true)}
           className={`object-cover object-top ${imageClassName}`}
         />
       </div>
